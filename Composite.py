@@ -16,7 +16,7 @@ class Composite(Product):
         return self.__constituents
 
     def get_price(self):
-        total = sum(x.get_price for x in self.__constituents)
+        total = sum(x.get_product.get_price for x in self.__constituents)
         total += self.get_man_cost 
         return total
 
